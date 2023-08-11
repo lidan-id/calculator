@@ -16,20 +16,12 @@ function Button({ item, setValueChange, value }) {
     } else if (item === "←") {
       setValueChange(value.slice(0, -1));
       return;
-    } else if (item === "+/-") {
-      if (!value || isOperator(item)) return;
-      else {
-        let tempp;
-        for (let i = lastIndex; i >= 0; i--) {
-          if (isOperator(value[i]) || i === 0) {
-            if (i === 0) {
-              tempp = value.slice(i);
-            } else {
-              tempp = value.slice(i + 1);
-            }
-          }
-        }
-      }
+      // } else if (item === "+/-") {
+      //   if (!value || isOperator(item)) {
+
+      //   };
+
+      //   }
     } else if (item === "%") {
       if (
         !value ||
@@ -112,6 +104,7 @@ function App() {
           </div>
         </div>
       </div>
+      {console.log(eval("2+(-8"))}
     </>
   );
 }
